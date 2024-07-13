@@ -585,3 +585,13 @@
 .footer .copyright a {
     color: var(--light);
 }
+
+div#valveModal{
+    margin-top: 60px !important;
+}
+
+.gradient-text {
+    background: linear-gradient(#00FF00, #0000FF);
+    -webkit-background-clip: text;
+    color: transparent;
+}
