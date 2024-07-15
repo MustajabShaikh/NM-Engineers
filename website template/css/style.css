@@ -595,3 +595,17 @@ div#valveModal{
     -webkit-background-clip: text;
     color: transparent;
 }
+
+.item.col-lg-4.col-md-6.service-item-top.wow.fadeInUp {
+    width: 300px !important;
+}
+
+@media (max-width: 320px) {
+    .item.col-lg-4.col-md-6.service-item-top.wow.fadeInUp {
+        width: 290px !important;
+        padding: 48px 15px 48px 5px !important;
+    }
+    /* .container-xxl.py-5{
+        padding: 48px 15px 48px 15px !important;
+    } */
+}
