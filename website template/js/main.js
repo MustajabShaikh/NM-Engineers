@@ -170,6 +170,51 @@
             }
         }
     });
+
+    //Valve slider modal
+    $(document).ready(function() {
+        $('#valveModal').on('shown.bs.modal', function (event) {
+            var button = $(event.relatedTarget); // Button that triggered the modal
+            var valve = button.data('valve'); // Extract info from data-* attributes
+            var modal = $(this);
+            modal.find('.modal-title').text(valve + ' Details');
+            if(valve === 'Ball Valve'){
+                modal.find('#valveDetails').text('A ball valve is a type of valve that controls the flow of a liquid or gas through a hollow, pivoting ball with a hole through its center. When the valve is open, the hole aligns with the pipeline, allowing fluid to flow through. Rotating the valve 90 degrees closes the valve, blocking the flow by positioning the solid part of the ball against the valve\'s seats. This design allows for quick, reliable operation and tight sealing, making ball valves ideal for applications where on/off control is needed without leakage. They come in various materials and sizes to accommodate different environments and flow requirements, from household plumbing to heavy industrial use.');
+            }else if(valve === 'Globe Valve'){
+                modal.find('#valveDetails').text('A globe valve is a type of linear motion valve used to regulate or stop the flow of fluid in a pipeline. It features a globe-shaped body with an internal baffle that directs flow and controls the opening and closing of a movable disk (or plug) against a stationary ring seat. This design allows for precise throttling of flow, making globe valves suitable for applications requiring fine flow control. They are commonly used in industries such as oil and gas, power generation, and water treatment. Globe valves are available in various materials and configurations to accommodate different pressures, temperatures, and fluid types.');
+            }else if(valve === 'Butterfly Valve'){
+                modal.find('#valveDetails').text('A butterfly valve is a quarter-turn rotational valve that uses a disc mounted on a rod to control flow. The disc is positioned in the center of the pipe and pivots 90 degrees to allow or block flow. When open, the disc is parallel to the flow direction, minimizing pressure drop. They are lightweight, compact, and operate quickly, making them suitable for large-scale applications like HVAC, water distribution, and industrial processes. Butterfly valves come in various types, including concentric, eccentric, and triple offset, each offering different sealing mechanisms and capabilities for handling different pressures and temperatures. Their versatility and ease of operation make them popular across industries requiring efficient flow control.');
+            }else if(valve === 'Gate Valve'){
+                modal.find('#valveDetails').text('A gate valve is a linear motion valve used to start or stop the flow of fluid. It features a flat or wedge-shaped gate that moves up and down perpendicular to the flow direction, providing a straight-through flow with minimal resistance when fully open. The gate is housed in the valve body and is raised or lowered by turning a handwheel or actuator. When fully closed, the gate fits snugly into the seats, ensuring a tight seal to prevent leakage. Gate valves are robust and durable, making them ideal for applications involving high pressures and temperatures. They are commonly used in water supply systems, oil and gas industries, and other industrial processes where full-flow or no-flow conditions are required. While not suitable for throttling due to potential damage to the gate and seats, gate valves are valued for their reliability and low maintenance in on/off control applications.');
+            }else if(valve === 'Check Valve'){
+                modal.find('#valveDetails').text('A check valve is a type of valve that allows fluid to flow in one direction only, preventing backflow. The valve operates automatically and is typically used to protect equipment from damage caused by reverse flow. The internal mechanism, which can be a flap, ball, or diaphragm, opens to allow flow in the forward direction and closes when flow reverses, ensuring a unidirectional flow. Check valves are compact, simple, and reliable, making them suitable for a wide range of applications, including pumps, compressors, and pipelines. There are several types of check valves, including swing check valves, lift check valves, and ball check valves, each designed to handle different flow characteristics and system requirements. Their ability to prevent backflow and ensure the proper operation of fluid systems makes them an essential component in various industries, including water treatment, oil and gas, and chemical processing.');
+            } else {
+                modal.find('#valveDetails').text('An industrial valve is a mechanical device used to regulate the flow and pressure of fluids in a system. These valves are crucial in various industries such as oil and gas, water treatment, chemical processing, and power generation. They consist of a body, bonnet, actuator, and closure element like a disc, ball, gate, or plug. Valves come in various types, each suited for specific applications. For example, gate valves offer low flow resistance and full-bore flow for on/off control, while globe valves provide excellent throttling capabilities. Industrial valves are designed to handle a range of pressures and temperatures, ensuring safe and efficient operation in different environments. Proper selection and maintenance are key to their optimal performance and longevity.');
+            }
+        });
+
+        // Initialize Owl Carousel
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            autoplay: true,
+            autoplayTimeout: 2000, 
+            dots: false, // Hide indicators
+            nav: false, // Set to false to hide navigator buttons
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items: 3
+                }
+            }
+        });
+    });
     
 })(jQuery);
 
