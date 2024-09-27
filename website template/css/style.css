@@ -596,6 +596,10 @@ div#valveModal {
   cursor: default;
 }
 
+.team-item.mb-4 {
+  width: 756px !important;
+}
+
 @media (max-width: 320px) {
   .item.col-lg-4.col-md-6.service-item-top.wow.fadeInUp {
     width: 290px !important;
