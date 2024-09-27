@@ -584,7 +584,7 @@ div#valveModal {
 
 .gradient-text {
   background: linear-gradient(#00ff00, #0000ff);
-  -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
 }
 
