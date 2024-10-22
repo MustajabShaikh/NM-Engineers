@@ -608,9 +608,9 @@ div#valveModal {
   }
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .gradient-text {
     color: transparent;
     background: linear-gradient(#00ff00, #0000ff);
   }
-}
+} */
