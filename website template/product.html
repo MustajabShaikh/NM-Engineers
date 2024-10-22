@@ -355,65 +355,26 @@
         // Get the query parameter from the URL
         const urlParams = new URLSearchParams(window.location.search);
         const product = urlParams.get("product");
-
+    
         // Define product data
         const products = {
           "globe-valve": {
             title: "Globe Valve",
-            description: "Engineered for precision and durability, our Globe Valve offers unparalleled control over flow regulation in your system. With a robust design and superior sealing capabilities, it ensures minimal leakage and optimal performance even under the most demanding conditions. Ideal for throttling applications, this valve is your go-to choice for reliable and efficient fluid management.",
+            description:
+              "Engineered for precision and durability, our Globe Valve offers unparalleled control over flow regulation in your system. With a robust design and superior sealing capabilities, it ensures minimal leakage and optimal performance even under the most demanding conditions. Ideal for throttling applications, this valve is your go-to choice for reliable and efficient fluid management.",
             price: "$99.99",
             images: ["./img/globe-valve.jpg", "img/globe-valve-2.jpg"],
           },
           "check-valve": {
             title: "Check Valve",
-            description: "Safeguard your systems with our premium Check Valve, designed to prevent backflow and ensure smooth, one-way fluid movement. Built with high-quality materials, it offers excellent resistance to wear and tear, making it perfect for a variety of industrial applications. Trust in its performance to protect your equipment and maintain the integrity of your processes.",
+            description:
+              "Safeguard your systems with our premium Check Valve, designed to prevent backflow and ensure smooth, one-way fluid movement. Built with high-quality materials, it offers excellent resistance to wear and tear, making it perfect for a variety of industrial applications. Trust in its performance to protect your equipment and maintain the integrity of your processes.",
             price: "$89.99",
             images: ["./img/check-valve.jpg", "img/check-valve-2.jpg"],
           },
-          "gate-valve": {
-            title: "Gate Valve",
-            description: "When you need a valve that delivers reliable shut-off, our Gate Valve is the perfect solution. Its solid construction and efficient design provide a tight seal, minimizing pressure loss and ensuring efficient fluid control. Ideal for systems where full flow or complete isolation is required, this valve is a staple in any robust piping network.",
-            price: "$79.99",
-            images: ["./img/gate-valve.jpg", "img/gate-valve-2.jpg"],
-          },
-          "butterfly-valve": {
-            title: "Butterfly Valve",
-            description: "Experience seamless flow control with our Butterfly Valve, a versatile solution that combines lightweight design with high performance. Its quick operation and low torque requirements make it an excellent choice for tight spaces and applications where speed and efficiency are paramount. Durable and easy to maintain, it’s the perfect blend of form and function.",
-            price: "$69.99",
-            images: ["./img/butterfly-valve.jpg", "img/butterfly-valve-2.jpg"],
-          },
-          "control-valve": {
-            title: "Control Valve",
-            description: "Achieve precision control with our advanced Control Valve, engineered for the most challenging environments. Its responsive design allows for fine-tuned adjustments, ensuring that your system operates at peak efficiency. Whether you’re managing temperature, pressure, or flow rate, this valve delivers consistent, reliable performance that you can count on.", 
-            price: "$119.99",
-            images: ["./img/control_valve.jpg", "img/control-valve-2.jpg"],
-          },
-          "needle-valve": {
-            title: "Needle Valve",
-            description: "For those who demand accuracy, our Needle Valve offers the ultimate in precise flow regulation. Its finely threaded stem and narrow seat design provide meticulous control over fluid flow, making it ideal for applications requiring exacting standards. Whether in laboratories or industrial settings, this valve ensures precision every time.",
-            price: "$49.99",
-            images: ["./img/needle_valve.jpg", "img/needle-valve-2.jpg"],
-          },
-          "diaphragm-valve": {
-            title: "Diaphragm Valve",
-            description: "Versatility meets reliability in our Diaphragm Valve, designed for handling a wide range of fluids, including corrosive and abrasive media. Its innovative design prevents contamination and offers a leak-proof seal, making it ideal for critical applications in industries such as pharmaceuticals, food processing, and water treatment. Depend on it for clean, safe, and efficient operation.",
-            price: "$89.99",
-            images: ["./img/diaphragm-valve.jpg", "img/diaphragm-valve-2.jpg"],
-          },
-          "ball-valve": {
-            title: "Ball Valve",
-            description: "Our Ball Valve is the epitome of simplicity and efficiency, offering reliable shut-off with minimal pressure drop. Its compact design and durable construction make it a favorite for both high-pressure and low-pressure applications. Easy to operate and maintain, this valve is the ideal choice for quick, secure flow control in any system.",
-            price: "$59.99",
-            images: ["./img/ball-valv.jpg", "img/ball-valve-2.jpg"],
-          },
-          "plug-valve": {
-            title: "Plug Valve",
-            description: "Designed for rugged environments, our Plug Valve offers robust performance with minimal maintenance. Its straightforward operation and compact design make it an excellent choice for systems requiring frequent on-off service. With its tight sealing capability, this valve is perfect for isolating flow in pipelines and ensuring system integrity.",
-            price: "$74.99",
-            images: ["./img/plug_valve.jpg", "img/plug-valve-2.jpg"],
-          },
+          // ... other products
         };
-
+    
         // Load the product details
         if (product && products[product]) {
           const data = products[product];
@@ -422,12 +383,19 @@
             imagesHtml += `<div class="carousel-item ${
               data.images.indexOf(img) === 0 ? "active" : ""
             }">
-              <img src="${img}" class="d-block w-100" alt="${
-              data.title
-            } Image" />
+              <img src="${img}" class="d-block w-100" alt="${data.title} Image" />
             </div>`;
           });
-
+    
+          // Generate WhatsApp link
+          const whatsappLink = `https://wa.me/1234567890?text=Hello,%20I'm%20interested%20in%20buying%20the%20${encodeURIComponent(
+            data.title
+          )}%20priced%20at%20${encodeURIComponent(
+            data.price
+          )}.%20Product%20Details:%20${encodeURIComponent(
+            data.description
+          )}%20Please%20provide%20more%20information.`;
+    
           $("#product-details").html(`
             <div class="row">
               <div class="col-lg-6">
@@ -449,7 +417,7 @@
                 <h2 class="mb-4">${data.title}</h2>
                 <p class="mb-4">${data.description}</p>
                 <h4 class="mb-4">${data.price}</h4>
-                <a href="#" class="btn btn-primary">Buy Now</a>
+                <a href="${whatsappLink}" target="_blank" class="btn btn-primary">Buy Now</a>
               </div>
             </div>
           `);
@@ -458,5 +426,6 @@
         }
       });
     </script>
+    
   </body>
 </html>
