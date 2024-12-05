@@ -132,7 +132,11 @@
             </div>
             <div class="ms-3">
               <p class="mb-1 text-white">You can call us on</p>
-              <h5 class="m-0 text-secondary"><a href="tel:+919974214669" class="text-secondary">+91 9974214669</a></h5>
+              <h5 class="m-0 text-secondary">
+                <a href="tel:+919974214669" class="text-secondary"
+                  >+91 9974214669</a
+                >
+              </h5>
             </div>
           </div>
         </div>
@@ -248,7 +252,10 @@
               Market Behind Asopalv Hotel ,Narol,Ahmedabad,Gujarat-382405
             </p>
             <p class="mb-2">
-              <i class="fa fa-phone-alt me-3"></i><a href="tel:+919974214669" class="text-secondary">+91 9974214669</a>
+              <i class="fa fa-phone-alt me-3"></i
+              ><a href="tel:+919974214669" class="text-secondary"
+                >+91 9974214669</a
+              >
             </p>
             <p class="mb-2">
               <i class="fa fa-envelope me-3"></i>nm.engineers2002@gmail.com
@@ -354,7 +361,7 @@
         // Get the query parameter from the URL
         const urlParams = new URLSearchParams(window.location.search);
         const product = urlParams.get("product");
-    
+
         // Define product data
         const products = {
           "globe-valve": {
@@ -373,7 +380,7 @@
           },
           // ... other products
         };
-    
+
         // Load the product details
         if (product && products[product]) {
           const data = products[product];
@@ -382,19 +389,19 @@
             imagesHtml += `<div class="carousel-item ${
               data.images.indexOf(img) === 0 ? "active" : ""
             }">
-              <img src="${img}" class="d-block w-100" alt="${data.title} Image" />
+              <img src="${img}" class="d-block w-100" alt="${
+              data.title
+            } Image" />
             </div>`;
           });
-    
+
           // Generate WhatsApp link
           const whatsappLink = `https://wa.me/+919974214669?text=Hello,%20I'm%20interested%20in%20buying%20the%20${encodeURIComponent(
             data.title
           )}%20priced%20at%20${encodeURIComponent(
             data.price
-          )}.%20Product%20Details:%20${encodeURIComponent(
-            data.description
-          )}%20Please%20provide%20more%20information.`;
-    
+          )}.%20Could%20you%20please%20share%20more%20details?`;
+
           $("#product-details").html(`
             <div class="row">
               <div class="col-lg-6">
