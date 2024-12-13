@@ -614,3 +614,11 @@ div#valveModal {
     background: linear-gradient(#00ff00, #0000ff);
   }
 } */
+
+.card-body {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}

@@ -432,16 +432,7 @@
         // Load the product details
         if (product && products[product]) {
           const data = products[product];
-          let imagesHtml = "";
-          data.images.forEach((img) => {
-            imagesHtml += `<div class="carousel-item ${
-              data.images.indexOf(img) === 0 ? "active" : ""
-            }">
-              <img src="${img}" class="d-block w-100" alt="${
-              data.title
-            } Image" />
-            </div>`;
-          });
+          const imageHtml = `<img src="${data.images[0]}" class="img-fluid" alt="${data.title} Image" />`;
 
           // Generate WhatsApp link
           const whatsappLink = `https://wa.me/+919974214669?text=Hello,%20I'm%20interested%20in%20buying%20the%20${encodeURIComponent(
@@ -453,19 +444,7 @@
           $("#product-details").html(`
             <div class="row">
               <div class="col-lg-6">
-                <div id="product-carousel" class="carousel slide" data-bs-ride="carousel">
-                  <div class="carousel-inner">
-                    ${imagesHtml}
-                  </div>
-                  <a class="carousel-control-prev" href="#product-carousel" role="button" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                  </a>
-                  <a class="carousel-control-next" href="#product-carousel" role="button" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                  </a>
-                </div>
+                ${imageHtml}
               </div>
               <div class="col-lg-6">
                 <h2 class="mb-4">${data.title}</h2>
