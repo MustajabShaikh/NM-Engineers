@@ -608,13 +608,6 @@ div#valveModal {
   }
 }
 
-/* @media (max-width: 768px) {
-  .gradient-text {
-    color: transparent;
-    background: linear-gradient(#00ff00, #0000ff);
-  }
-} */
-
 .card-body {
   display: flex;
   flex-direction: row;
@@ -622,3 +615,21 @@ div#valveModal {
   justify-content: space-between;
   text-align: center;
 }
+
+.modal-body {
+  max-height: 76vh;
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+@media (max-width: 768px) {
+  .modal-body {
+    max-height: 72vh; /* Slightly smaller height for mobile devices */
+  }
+}
+
+@media (max-width: 576px) {
+  .modal-body {
+    max-height: 75vh; /* Even smaller height for very small screens */
+  }
+}
+
