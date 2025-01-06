@@ -4,18 +4,12 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
+<!-- Created with Free Online Sitemap Generator -->
 
 <url>
   <loc>https://nmengineers.in/</loc>
   <lastmod>2025-01-03T20:23:38+00:00</lastmod>
   <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://nmengineers.in/index.html</loc>
-  <lastmod>2025-01-03T20:23:38+00:00</lastmod>
-  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://nmengineers.in/about.html</loc>
@@ -43,50 +37,48 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://nmengineers.in/product.html?product=gate-valve</loc>
+  <loc>https://nmengineers.in/product/gate-valve</loc>
   <lastmod>2025-01-03T20:23:38+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://nmengineers.in/product.html?product=globe-valve</loc>
+  <loc>https://nmengineers.in/product/globe-valve</loc>
   <lastmod>2025-01-03T20:23:38+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://nmengineers.in/product.html?product=ball-valve</loc>
+  <loc>https://nmengineers.in/product/ball-valve</loc>
   <lastmod>2025-01-03T20:23:38+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://nmengineers.in/product.html?product=butterfly-valve</loc>
+  <loc>https://nmengineers.in/product/butterfly-valve</loc>
   <lastmod>2025-01-03T20:23:38+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://nmengineers.in/product.html?product=check-valve</loc>
+  <loc>https://nmengineers.in/product/check-valve</loc>
   <lastmod>2025-01-03T20:23:38+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://nmengineers.in/product.html?product=control-valve</loc>
+  <loc>https://nmengineers.in/product/control-valve</loc>
   <lastmod>2025-01-03T20:23:38+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://nmengineers.in/product.html?product=diaphragm-valve</loc>
+  <loc>https://nmengineers.in/product/diaphragm-valve</loc>
   <lastmod>2025-01-03T20:23:38+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://nmengineers.in/product.html?product=needle-valve</loc>
+  <loc>https://nmengineers.in/product/needle-valve</loc>
   <lastmod>2025-01-03T20:23:38+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://nmengineers.in/product.html?product=plug-valve</loc>
+  <loc>https://nmengineers.in/product/plug-valve</loc>
   <lastmod>2025-01-03T20:23:38+00:00</lastmod>
   <priority>0.80</priority>
 </url>
-
-
 </urlset>
