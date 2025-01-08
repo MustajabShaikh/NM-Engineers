@@ -235,7 +235,6 @@
               features, benefits, and specifications of the product to provide
               comprehensive information to potential customers.
             </p>
-            <h4 class="mb-4">$99.99</h4>
             <a href="#" class="btn btn-primary">Buy Now</a>
           </div>
         </div>
@@ -369,63 +368,54 @@
             title: "Globe Valve",
             description:
               "Engineered for precision and durability, our Globe Valve offers unparalleled control over flow regulation in your system. With a robust design and superior sealing capabilities, it ensures minimal leakage and optimal performance even under the most demanding conditions. Ideal for throttling applications, this valve is your go-to choice for reliable and efficient fluid management.",
-            price: "$99.99",
             images: ["./img/globe-valve.jpg"],
           },
           "check-valve": {
             title: "Check Valve",
             description:
               "Safeguard your systems with our premium Check Valve, designed to prevent backflow and ensure smooth, one-way fluid movement. Built with high-quality materials, it offers excellent resistance to wear and tear, making it perfect for a variety of industrial applications. Trust in its performance to protect your equipment and maintain the integrity of your processes.",
-            price: "$89.99",
             images: ["./img/check-valve.jpg"],
           },
           "gate-valve": {
             title: "Gate Valve",
             description:
               "Designed for full-flow applications, our Gate Valve provides excellent shut-off capabilities with minimal flow resistance. Constructed with durable materials, it ensures long-lasting performance in both high-pressure and high-temperature environments. Ideal for isolating flow in a wide range of industrial systems.",
-            price: "$109.99",
             images: ["./img/gate-valve.jpg"],
           },
           "butterfly-valve": {
             title: "Butterfly Valve",
             description:
               "Streamline your fluid control processes with our Butterfly Valve, featuring a lightweight, compact design and reliable sealing. Suitable for both throttling and isolation, this valve offers quick operation and minimal maintenance, making it ideal for diverse industrial applications.",
-            price: "$79.99",
             images: ["./img/butterfly-valve.jpg"],
           },
           "ball-valve": {
             title: "Ball Valve",
             description:
               "Achieve efficient and reliable fluid control with our Ball Valve, known for its tight sealing and ease of operation. Its sturdy construction ensures excellent durability, making it suitable for high-pressure and high-temperature systems across a range of industries.",
-            price: "$94.99",
             images: ["./img/ball-valv.jpg"],
           },
           "control-valve": {
             title: "Control Valve",
             description:
               "Optimize your system performance with our advanced Control Valve, designed for precise modulation of fluid flow, pressure, and temperature. Its robust construction and cutting-edge technology make it a perfect fit for complex industrial operations requiring high accuracy.",
-            price: "$149.99",
             images: ["./img/control_valve.jpg"],
           },
           "plug-valve": {
             title: "Plug Valve",
             description:
               "Experience smooth, reliable operation with our Plug Valve, engineered to handle high-flow rates with minimal pressure drop. Its simple design ensures easy maintenance, while its durable construction guarantees long-term performance in demanding environments.",
-            price: "$89.99",
             images: ["./img/plug_valve.jpg"],
           },
           "diaphragm-valve": {
             title: "Diaphragm Valve",
             description:
               "Ensure precise flow control and leak-proof performance with our Diaphragm Valve, ideal for handling corrosive and abrasive fluids. Its innovative design minimizes contamination risk, making it the perfect choice for critical industrial processes.",
-            price: "$119.99",
             images: ["./img/diaphragm-valve.jpg"],
           },
           "needle-valve": {
             title: "Needle Valve",
             description:
               "Achieve precise flow control with our Needle Valve, designed for fine adjustments in low-flow applications. Its compact and sturdy design ensures reliable performance, making it ideal for high-pressure systems requiring exact regulation.",
-            price: "$69.99",
             images: ["./img/needle_valve.jpg"],
           },
         };
@@ -438,8 +428,6 @@
           // Generate WhatsApp link
           const whatsappLink = `https://wa.me/+919974214669?text=Hello,%20I'm%20interested%20in%20buying%20the%20${encodeURIComponent(
             data.title
-          )}%20priced%20at%20${encodeURIComponent(
-            data.price
           )}.%20Could%20you%20please%20share%20more%20details?`;
 
           $("#product-details").html(`
@@ -450,7 +438,6 @@
               <div class="col-lg-6">
                 <h2 class="mb-4">${data.title}</h2>
                 <p class="mb-4">${data.description}</p>
-                <h4 class="mb-4">${data.price}</h4>
                 <a href="${whatsappLink}" target="_blank" class="btn btn-primary">Buy Now</a>
               </div>
             </div>
