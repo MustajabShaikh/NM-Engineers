@@ -18,6 +18,14 @@
   z-index: 99;
 }
 
+.whatsapp-button {
+  position: fixed;
+  display: none;
+  right: 45px;
+  bottom: 100px;
+  z-index: 99;
+}
+
 /*** Spinner ***/
 #spinner {
   opacity: 0;
